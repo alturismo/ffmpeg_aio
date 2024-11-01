@@ -1078,6 +1078,6 @@ RUN \
 
 COPY /root /
 
-ENTRYPOINT ["/ffmpegwrapper.sh"]
+# ENTRYPOINT ["/ffmpegwrapper.sh"]
 
-CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
+ENTRYPOINT  ["tail -f /dev/null"]
